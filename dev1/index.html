@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scoreboard</title>
+</head>
+
+<body>
+    <dl class="sub-nav">
+        <dt>並び替え:</dt>
+        <dd class="sort active" data-sort="default"><a href="#default">デフォルト</a></dd>
+        <dd class="sort" data-sort="myorder:asc"><a href="#asc">昇順</a></dd>
+        <dd class="sort" data-sort="myorder:desc"><a href="#desc">降順</a></dd>
+        <dd class="sort" data-sort="random"><a href="#random">ランダム</a></dd>
+    </dl>
+
+    <div id="Container"></div>
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.js"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+    <script src='http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js'></script>
+    <script type="text/babel" src="js/main.jsx"></script>
+</body>
+
+</html>

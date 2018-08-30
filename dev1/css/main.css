@@ -1,18 +1,7 @@
 #Container .mix {
+    /*list-style-type: none;*/
     display: none;
 }
-
-.mix {
-    width: 90vw;
-    height: 10vh;
-    /*background-color: black;*/
-}
-
-
-/* Side Nav */
-
-
-/* line 65, ../../../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/zurb-foundation-4.0.0.rc1/scss/foundation/components/_sub-nav.scss */
 
 .sub-nav {
     display: block;
