@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scoreboard</title>
+</head>
+
+<body>
+    <button id="set_test_data_button">set test data</button>
+
+    <dl class="sub-nav">
+        <dt>並び替え:</dt>
+        <dd class="sort active" data-sort="default"><a href="#default">デフォルト</a></dd>
+        <dd class="sort" data-sort="myorder:asc"><a href="#asc">昇順</a></dd>
+        <dd class="sort" data-sort="myorder:desc"><a href="#desc">降順</a></dd>
+    </dl>
+
+    <div id="Container">
+        <ul id="scorelist">
+            <!--
+                [研究室: 文字順]
+                清水, 篠森, 栗原, 中原, 濱村, 福本, 横山
+            -->
+            <li id="shimizu" class="mix" data-myorder="1">
+                <div>清水研究室
+                    <div id="shimizu-sumscore"></div>
+                </div>
+                <input id="shimizu-mk8" class="input-score" type="number" placeholder="マリオカート8" />
+                <input id="shimizu-sm" class="input-score" type="number" placeholder="大乱闘スマッシュブラザーズ" />
+                <input id="shimizu-gb" class="input-score" type="number" placeholder="Gang Beasts" />
+            </li>
+            <li id="shinomori" class="mix" data-myorder="1">
+                <div>篠森研究室
+                    <div id="shinomori-sumscore"></div>
+                </div>
+                <input id="shinomori-mk8" class="input-score" type="number" placeholder="マリオカート8" />
+                <input id="shinomori-sm" class="input-score" type="number" placeholder="大乱闘スマッシュブラザーズ" />
+                <input id="shinomori-gb" class="input-score" type="number" placeholder="Gang Beasts" />
+            </li>
+            <li id="kurihara" class="mix" data-myorder="1">
+                <div>栗原研究室
+                    <div id="kurihara-sumscore"></div>
+                </div>
+                <input id="kurihara-mk8" class="input-score" type="number" placeholder="マリオカート8" />
+                <input id="kurihara-sm" class="input-score" type="number" placeholder="大乱闘スマッシュブラザーズ" />
+                <input id="kurihara-gb" class="input-score" type="number" placeholder="Gang Beasts" />
+            </li>
+            <li id="nakahara" class="mix" data-myorder="1">
+                <div>中原研究室
+                    <div id="nakahara-sumscore"></div>
+                </div>
+                <input id="nakahara-mk8" class="input-score" type="number" placeholder="マリオカート8" />
+                <input id="nakahara-sm" class="input-score" type="number" placeholder="大乱闘スマッシュブラザーズ" />
+                <input id="nakahara-gb" class="input-score" type="number" placeholder="Gang Beasts" />
+            </li>
+            <li id="hamamura" class="mix" data-myorder="1">
+                <div>濱村研究室
+                    <div id="hamamura-sumscore"></div>
+                </div>
+                <input id="hamamura-mk8" class="input-score" type="number" placeholder="マリオカート8" />
+                <input id="hamamura-sm" class="input-score" type="number" placeholder="大乱闘スマッシュブラザーズ" />
+                <input id="hamamura-gb" class="input-score" type="number" placeholder="Gang Beasts" />
+            </li>
+            <li id="fukumoto" class="mix" data-myorder="1">
+                <div>福本研究室
+                    <div id="fukumoto-sumscore"></div>
+                </div>
+                <input id="fukumoto-mk8" class="input-score" type="number" placeholder="マリオカート8" />
+                <input id="fukumoto-sm" class="input-score" type="number" placeholder="大乱闘スマッシュブラザーズ" />
+                <input id="fukumoto-gb" class="input-score" type="number" placeholder="Gang Beasts" />
+            </li>
+            <li id="yokoyama" class="mix" data-myorder="1">
+                <div>横山研究室
+                    <div id="yokoyama-sumscore"></div>
+                </div>
+                <input id="yokoyama-mk8" class="input-score" type="number" placeholder="マリオカート8" />
+                <input id="yokoyama-sm" class="input-score" type="number" placeholder="大乱闘スマッシュブラザーズ" />
+                <input id="yokoyama-gb" class="input-score" type="number" placeholder="Gang Beasts" />
+            </li>
+        </ul>
+    </div>
+
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--<script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/mixitup.min.js"></script>-->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+    <script src='http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js'></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
