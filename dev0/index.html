@@ -13,9 +13,8 @@
 
     <dl class="sub-nav">
         <dt>並び替え:</dt>
-        <dd class="sort active" data-sort="default"><a href="#default">デフォルト</a></dd>
-        <dd class="sort" data-sort="myorder:asc"><a href="#asc">昇順</a></dd>
-        <dd class="sort" data-sort="myorder:desc"><a href="#desc">降順</a></dd>
+        <dd class="sort active" data-sort="default"><a href="#default" id="default-order">デフォルト</a></dd>
+        <dd class="sort" data-sort="myorder:desc"><a href="#desc" id="ranking-order">ランキング</a></dd>
     </dl>
 
     <div id="Container">
@@ -24,7 +23,16 @@
                 [研究室: 文字順]
                 清水, 篠森, 栗原, 中原, 濱村, 福本, 横山
             -->
+            <li class="mix description" data-myorder="1E+10">
+                <img class="order-deco" src="src/white.png" alt="" />
+                <div class="labname">〇〇研究室</div>
+                <div class="sumscore">総合得点</div>
+                <input class="input-score" type="text" placeholder="マリオカート8" disabled/>
+                <input class="input-score" type="text" placeholder="大乱闘スマッシュブラザーズ" disabled/>
+                <input class="input-score" type="text" placeholder="Gang Beasts" disabled/>
+            </li>
             <li id="shimizu" class="mix" data-myorder="1">
+                <img id="shimizu-order-deco" class="order-deco" src="src/white.png" alt="" />
                 <div class="labname">清水研究室</div>
                 <div id="shimizu-sumscore" class="sumscore">0</div>
                 <input id="shimizu-mk" class="input-score" type="number" placeholder="マリオカート8" disabled/>
@@ -32,6 +40,7 @@
                 <input id="shimizu-gb" class="input-score" type="number" placeholder="Gang Beasts" disabled/>
             </li>
             <li id="shinomori" class="mix" data-myorder="1">
+                <img id="shinomori-order-deco" class="order-deco" src="src/white.png" alt="" />
                 <div class="labname">篠森研究室</div>
                 <div id="shinomori-sumscore" class="sumscore">0</div>
                 <input id="shinomori-mk" class="input-score" type="number" placeholder="マリオカート8" disabled/>
@@ -39,6 +48,7 @@
                 <input id="shinomori-gb" class="input-score" type="number" placeholder="Gang Beasts" disabled/>
             </li>
             <li id="kurihara" class="mix" data-myorder="1">
+                <img id="kurihara-order-deco" class="order-deco" src="src/white.png" alt="" />
                 <div class="labname">栗原研究室</div>
                 <div id="kurihara-sumscore" class="sumscore">0</div>
                 <input id="kurihara-mk" class="input-score" type="number" placeholder="マリオカート8" disabled/>
@@ -46,6 +56,7 @@
                 <input id="kurihara-gb" class="input-score" type="number" placeholder="Gang Beasts" disabled/>
             </li>
             <li id="nakahara" class="mix" data-myorder="1">
+                <img id="nakahara-order-deco" class="order-deco" src="src/white.png" alt="" />
                 <div class="labname">中原研究室</div>
                 <div id="nakahara-sumscore" class="sumscore">0</div>
                 <input id="nakahara-mk" class="input-score" type="number" placeholder="マリオカート8" disabled/>
@@ -53,6 +64,7 @@
                 <input id="nakahara-gb" class="input-score" type="number" placeholder="Gang Beasts" disabled/>
             </li>
             <li id="hamamura" class="mix" data-myorder="1">
+                <img id="hamamura-order-deco" class="order-deco" src="src/white.png" alt="" />
                 <div class="labname">濱村研究室</div>
                 <div id="hamamura-sumscore" class="sumscore">0</div>
                 <input id="hamamura-mk" class="input-score" type="number" placeholder="マリオカート8" disabled/>
@@ -60,6 +72,7 @@
                 <input id="hamamura-gb" class="input-score" type="number" placeholder="Gang Beasts" disabled/>
             </li>
             <li id="fukumoto" class="mix" data-myorder="1">
+                <img id="fukumoto-order-deco" class="order-deco" src="src/white.png" alt="" />
                 <div class="labname">福本研究室</div>
                 <div id="fukumoto-sumscore" class="sumscore">0</div>
                 <input id="fukumoto-mk" class="input-score" type="number" placeholder="マリオカート8" disabled/>
@@ -67,6 +80,7 @@
                 <input id="fukumoto-gb" class="input-score" type="number" placeholder="Gang Beasts" disabled/>
             </li>
             <li id="yokoyama" class="mix" data-myorder="1">
+                <img id="yokoyama-order-deco" class="order-deco" src="src/white.png" alt="" />
                 <div class="labname">横山研究室</div>
                 <div id="yokoyama-sumscore" class="sumscore">0</div>
                 <input id="yokoyama-mk" class="input-score" type="number" placeholder="マリオカート8" disabled/>
