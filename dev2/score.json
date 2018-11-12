@@ -1,0 +1,172 @@
+[{
+    "id": 1,
+    "name": "濱村",
+    "score": {
+        "mk": 0,
+        "sb": 0,
+        "gb": 0
+    },
+    "enable": true
+}, {
+    "id": 2,
+    "name": "岩田",
+    "score": {
+        "mk": 1,
+        "sb": 0,
+        "gb": 10
+    },
+    "enable": true
+}, {
+    "id": 3,
+    "name": "敷田",
+    "score": {
+        "mk": 0,
+        "sb": 0,
+        "gb": 0
+    },
+    "enable": true
+}, {
+    "id": 4,
+    "name": "篠森",
+    "score": {
+        "mk": 0,
+        "sb": 0,
+        "gb": 0
+    },
+    "enable": true
+}, {
+    "id": 5,
+    "name": "清水",
+    "score": {
+        "mk": 0,
+        "sb": 0,
+        "gb": 0
+    },
+    "enable": true
+}, {
+    "id": 6,
+    "name": "中原",
+    "score": {
+        "mk": 0,
+        "sb": 0,
+        "gb": 0
+    },
+    "enable": true
+}, {
+    "id": 7,
+    "name": "福本",
+    "score": {
+        "mk": 0,
+        "sb": 0,
+        "gb": 0
+    },
+    "enable": true
+}, {
+    "id": 8,
+    "name": "松崎",
+    "score": {
+        "mk": 0,
+        "sb": 0,
+        "gb": 0
+    },
+    "enable": true
+}, {
+    "id": 9,
+    "name": "横山",
+    "score": {
+        "mk": 0,
+        "sb": 0,
+        "gb": 0
+    },
+    "enable": true
+}, {
+    "id": 10,
+    "name": "任",
+    "score": {
+        "mk": 0,
+        "sb": 0,
+        "gb": 0
+    },
+    "enable": true
+}, {
+    "id": 11,
+    "name": "鵜川",
+    "score": {
+        "mk": 1,
+        "sb": 1,
+        "gb": 1
+    },
+    "enable": true
+}, {
+    "id": 12,
+    "name": "門田",
+    "score": {
+        "mk": 0,
+        "sb": 0,
+        "gb": 0
+    },
+    "enable": true
+}, {
+    "id": 13,
+    "name": "栗原",
+    "score": {
+        "mk": 10,
+        "sb": 9,
+        "gb": 8
+    },
+    "enable": true
+}, {
+    "id": 14,
+    "name": "繁桝",
+    "score": {
+        "mk": 0,
+        "sb": 0,
+        "gb": 0
+    },
+    "enable": true
+}, {
+    "id": 15,
+    "name": "高田",
+    "score": {
+        "mk": 0,
+        "sb": 0,
+        "gb": 0
+    },
+    "enable": true
+}, {
+    "id": 16,
+    "name": "妻鳥",
+    "score": {
+        "mk": 0,
+        "sb": 0,
+        "gb": 0
+    },
+    "enable": true
+}, {
+    "id": 17,
+    "name": "吉田",
+    "score": {
+        "mk": 0,
+        "sb": 0,
+        "gb": 0
+    },
+    "enable": true
+}, {
+    "id": 18,
+    "name": "植田",
+    "score": {
+        "mk": 0,
+        "sb": 0,
+        "gb": 0
+    },
+    "enable": true
+}, {
+    "id": 19,
+    "name": "竹内",
+    "score": {
+        "mk": 0,
+        "sb": 0,
+        "gb": 0
+    },
+    "enable": true
+}]
