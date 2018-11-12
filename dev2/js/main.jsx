@@ -124,13 +124,6 @@ function deco_ranking() {
         document.getElementById('img'+id).src = icons[i-1];
     }
 }
-function get3top(ul) {
-    const items = ul.children;
-    for (let i=1; i<=3; i++) {
-        const id = items[i].id;
-        console.log(id);
-    }
-}
 
 
 
