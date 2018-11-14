@@ -8,7 +8,8 @@ var state = STATE_DEFAULT;
 // *********************
 // ***** constants *****
 // *********************
-const url = 'score.json';
+//const url = 'score.json';
+const url = 'http://localhost:3000/labs';
 const STATE_DEFAULT = 0;
 const STATE_RANKING = 1;
 
@@ -20,6 +21,7 @@ const STATE_RANKING = 1;
 function ScoreList(props) {
     console.log("ScoreList", props);
     const labs = props.labs;
+    console.log(labs);
     const _desc = Score_desc()
     const _items = labs.map((lab) => <Score lab={lab}/>);
     return (
@@ -99,6 +101,7 @@ function deco() {
             deco_default();
             break;
         case STATE_RANKING:
+            deco_default();
             deco_ranking();
             break;
     }
@@ -143,5 +146,7 @@ $(function() {
 
         $('#Container').on('mixEnd', function() { deco() });
         $('#Container').mixItUp();
+
+        document.getElementById('update-button').onclick = () => location.reload();
     });
 });

@@ -3,12 +3,16 @@
 }
 
 .labname {
-    /*float: left;*/
+    float: left;
     margin-left: 5vh;
 }
 
 .item {
     margin-bottom: 5vh;
+}
+
+.savebutton {
+    margin-left: 5vh;
 }
 
 li {
