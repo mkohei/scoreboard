@@ -1,0 +1,16 @@
+.checkbox {
+    float: left;
+}
+
+.labname {
+    /*float: left;*/
+    margin-left: 5vh;
+}
+
+.item {
+    margin-bottom: 5vh;
+}
+
+li {
+    list-style: none;
+}
