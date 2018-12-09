@@ -54,7 +54,7 @@ function Score(props) {
     const _icon = Icon("img" + lab.id);
     const _labname = LabName(lab.name + "研究室");
     const sumscore = lab.score.mk + lab.score.sb + lab.score.gb;
-    const _sumscore = SumScore(sumscore);
+    const _sumscore = SumScore(sumscore, "sumscore"+lab.id);
     const _mk = MK(lab.score.mk, "mk" + lab.id);
     const _sb = SB(lab.score.sb, "sb" + lab.id);
     const _gb = GB(lab.score.gb, "gb" + lab.id);
@@ -77,8 +77,8 @@ function Icon(id) {
 function LabName(labname) {
     return <div className="labname">{labname}</div>;
 }
-function SumScore(score) {
-    return <div className="sumscore">{score}</div>;
+function SumScore(score, id) {
+    return <div id={id} className="sumscore">{score}</div>;
 }
 function MK(score, id) {
     return <input id={id} className="input-score" type="text" placeholder="マリオカート" value={score} disabled/>;
@@ -116,15 +116,37 @@ function deco_default() {
 }
 function deco_ranking() {
     const scorelist = document.getElementById('scorelist');
+    /*
     const len = scorelist.children.length >= 4
                     ? 4
                     : scorelist.children.length;
+    */
+    const len = scorelist.children.length;
     const colors = ['#FFD70080', '#C0C0C080', '#C4722280'];
     const icons = ['src/1-3.png', 'src/2.png', 'src/3.png'];
+
+    let rank = 0; // ランキング
+    let skip = 1; // 同点の数
+    let pScore = -1; // 同点比較のための前回スコア
     for(let i=1; i<len; i++) {
         const id = scorelist.children[i].id;
-        document.getElementById(id).style.backgroundColor = colors[i-1];
-        document.getElementById('img'+id).src = icons[i-1];
+        const _sumscore = document.getElementById('sumscore'+id);
+        const sumscore = _sumscore.innerText;
+
+        if (+sumscore != pScore) {
+            rank += skip;
+            skip = 1;
+            if (rank > 3) break;
+        } else {
+            skip++;
+        }
+
+        console.log(i, 'sumscore'+id,  rank, +sumscore);
+
+        document.getElementById(id).style.backgroundColor = colors[rank-1];
+        document.getElementById('img'+id).src = icons[rank-1];
+
+        pScore = +sumscore;
     }
 }
 
