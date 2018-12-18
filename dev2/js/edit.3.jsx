@@ -8,10 +8,7 @@ var json = {};
 // *********************
 // ***** constants *****
 // *********************
-//const url = 'score.json';
-const url = 'http://localhost:3000/labs';
-// TODO:
-const puturl = 'localhost:8080'
+const url = './api/';
 
 
 
@@ -62,12 +59,13 @@ class EditList extends React.Component {
         const new_mk = mkval === "" ? lab.score.mk : +mkval;
         const new_sb = sbval === "" ? lab.score.sb : +sbval;
         const new_gb = gbval === "" ? lab.score.gb : +gbval;
-        fetch(url + '/' + lab.id, {
-            method: 'PUT',
+        fetch(url, {
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
+                id : lab.id,
                 name: lab.name,
                 score: {
                     mk: +new_mk,
