@@ -1,15 +1,15 @@
 // *********************
 // ***** variables *****
 // *********************
-var state = STATE_DEFAULT;
-
+//var state = STATE_DEFAULT;
+var state = STATE_RANKING; // ここでは初期化できていない？
 
 
 // *********************
 // ***** constants *****
 // *********************
 //const url = 'score.json';
-const url = 'http://localhost:3000/labs';
+const url = './api/';
 const STATE_DEFAULT = 0;
 const STATE_RANKING = 1;
 
@@ -96,6 +96,7 @@ function GB(score, id) {
 // ***** functions *****
 // *********************
 function deco() {
+    console.log(state);
     switch(state) {
         case STATE_DEFAULT:
             deco_default();
@@ -157,6 +158,8 @@ function deco_ranking() {
 // ****************
 $(function() {
     $.getJSON(url, function(data) {
+        state = STATE_RANKING; // init
+
         console.log(data);
         ReactDOM.render(
             <ScoreList labs={data}/>,
@@ -167,7 +170,11 @@ $(function() {
         document.getElementById('ranking-order').onclick = function() { state = STATE_RANKING };
 
         $('#Container').on('mixEnd', function() { deco() });
-        $('#Container').mixItUp();
+        $('#Container').mixItUp({
+            load: {
+                sort: "score:desc"
+            }
+        });
 
         document.getElementById('update-button').onclick = () => location.reload();
     });

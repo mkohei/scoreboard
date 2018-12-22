@@ -8,12 +8,12 @@ var json = {};
 // *********************
 // ***** constants *****
 // *********************
-//const url = 'score.json';
-const url = 'http://localhost:3000/labs';
-// TODO:
-const puturl = 'localhost:8080'
+const url = './api/';
 
-
+const bg_colors = {
+    true: "FF0000",
+    false: "FFFFFF"
+};
 
 // **************************
 // ***** react elements *****
@@ -41,33 +41,37 @@ class EditList extends React.Component {
 
     init() {
         this.state.labs.map(lab => {
-            this.putScores({
-                id: lab.id,
-                name: lab.name,
-                score: {
-                    mk: 0,
-                    sb: 0,
-                    gb: 0
-                },
-                enable: true
-            });
+            const sum = lab.score.mk + lab.score.sb + lab.score.gb;
+            if (sum > 0) {
+                this.putScores({
+                    id: lab.id,
+                    name: lab.name,
+                    score: {
+                        mk: 0,
+                        sb: 0,
+                        gb: 0
+                    },
+                    enable: lab.enable
+                });
+            } else {
+            }
         })
     }
 
     putScores(lab) {
-        console.log(lab);
         const mkval = this.refs['mk' + lab.id + 'after'].value;
         const sbval = this.refs['sb' + lab.id + 'after'].value;
         const gbval = this.refs['gb' + lab.id + 'after'].value;
         const new_mk = mkval === "" ? lab.score.mk : +mkval;
         const new_sb = sbval === "" ? lab.score.sb : +sbval;
         const new_gb = gbval === "" ? lab.score.gb : +gbval;
-        fetch(url + '/' + lab.id, {
-            method: 'PUT',
+        fetch(url, {
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
+                id : lab.id,
                 name: lab.name,
                 score: {
                     mk: +new_mk,
@@ -77,11 +81,10 @@ class EditList extends React.Component {
                 enable: lab.enable
             })
         }).then(res => {
-            console.log(res);
             return res.json();
         }).then(json => {
             console.log(json);
-            return this.state.labs.map(lab => ({
+             return this.state.labs.map(lab => ({
                 id: lab.id,
                 name: lab.name,
                 score: json.id ==lab.id
@@ -92,7 +95,6 @@ class EditList extends React.Component {
                             : lab.enable
             }));
         }).then(labs => {
-            console.log(labs);
             this.setState({labs: labs});
         });
     }
@@ -100,7 +102,7 @@ class EditList extends React.Component {
     render() {
         const _items = this.state.labs.map((lab) =>
             (
-                <li id={lab.id} className="item">
+                <li id={lab.id} className={"item " + "item_"+lab.enable}>
                     <input id={"checkbox" + lab.id} className="checkbox" type="checkbox" onClick={() => this.changeSelection(lab.id)} checked={lab.enable} />
                     <div className="labname">{lab.name}研究室</div>
                     <button className="savebutton" onClick={
@@ -128,7 +130,7 @@ class EditList extends React.Component {
         );
         return (
             <div>
-                <button id="init_button"  onClick={this.init}>init</button>
+                <button id="init_button"  onClick={this.init}>init score</button>
                 <ul>
                     {_items}
                 </ul>

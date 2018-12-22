@@ -7,7 +7,7 @@
 // *********************
 // ***** constants *****
 // *********************
-const url = 'score.json';
+const url = './api/';
 
 
 
